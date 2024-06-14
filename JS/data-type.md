@@ -74,15 +74,15 @@ let numbers = [1, 2, 3]
 console.log(nums == numbers)  // false
 
 let userOne = {
-name:'Asabeneh',
+name:'Shubham',
 role:'teaching',
-country:'Finland'
+country:'India'
 }
 
 let userTwo = {
-name:'Asabeneh',
+name:'Shubham',
 role:'teaching',
-country:'Finland'
+country:'India'
 }
 
 console.log(userOne == userTwo) // false
