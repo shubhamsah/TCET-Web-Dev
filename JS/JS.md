@@ -7,4 +7,4 @@
 | 03    |                             [Booleans, Operators](./operators.md)                                                                         |
 | 04    |                                            [Conditionals](./Conditionals.md)                                                     |
 | 05    |                                            [Loops](./Loops.md)                                                                   |  
-| 06    |                                            [Loops](./arrays.md)                                                                   |
+| 06    |                                            [Arrays](./arrays.md)                                                                   |
