@@ -2,7 +2,8 @@
 
 | #     |                                                                       Topics                                                                        |
 | ----- | :-------------------------------------------------------------------------------------------------------------------------------------------------: |
-| 01    |                                                             [Introduction](./JS/JS.md)                                                              |
+| 01    |                                                             [Variables](./variables.md.md)                                                              |
+| 01-a    |                                                             [Comments](./comments.md.md)                                                              |
 | 02    |                                               [Data Types](./data-type.md)                                                               |
 | 03    |                             [Booleans, Operators](./operators.md)                                                                         |
 | 04    |                                            [Conditionals](./Conditionals.md)                                                     |
