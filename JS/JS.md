@@ -12,3 +12,4 @@
 | 08    |                                            [Objects](./objects.md)                                                                   |
 | 09    |                                            [Classes](./classes.md)                                                                   |
 | 10    |                                            [Async JS](./asyncjs.md)                                                                   |
+| 11    |                                            [Error Handling](./error-handling.md)                                                                   |
