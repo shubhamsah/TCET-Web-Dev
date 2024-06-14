@@ -14,3 +14,5 @@
 | 10    |                                            [Async JS](./asyncjs.md)                                                                   |
 | 11    |                                            [Error Handling](./error-handling.md)                                                                   |
 | 12    |                                            [Console object and Methods](./console.md)                                                                   |
+| 13    |                                            [JSON](./Json.md)                                                                   |
+| 14    |                                            [Special Methods](./specialMethods.md)                                                                   |
