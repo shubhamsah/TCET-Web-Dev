@@ -1,1 +1,3 @@
 remote_theme: "dracula/gh-pages"
+
+include: ./styles.css
