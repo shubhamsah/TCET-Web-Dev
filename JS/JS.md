@@ -17,3 +17,5 @@
 | 12    |                                            [Console object and Methods](./console.md)                                                               |
 | 13    |                                            [JSON](./Json.md)                                                                                        |  
 | 14    |                                            [Special Methods](./specialMethods.md)                                                                   |
+| 15    |                                            [Closures](./closures.md)                                                                   |
+| 16    |                                            [String Special Methods](./stringMethods.md)                                                                   |
