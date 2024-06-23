@@ -1,0 +1,32 @@
+//Code By - Shivsagar Mishra
+
+const fs = require('fs');
+
+// adding Path to the file we want to clean
+const filePath = './a.txt';
+
+// Creating Function to clean the file
+function cleanFile(filePath) {
+    // Read the file
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            return console.error(`Error reading file: ${err.message}`);
+        }
+        console.log(`read data: ${data}`)
+
+        // Replacing multiple spaces with a single space
+        const cleanedData = data.replace(/\s+/g, ' ').trim();
+
+        // Writing the cleaned data back to the same file
+        fs.writeFile(filePath, cleanedData, 'utf8', (err) => {
+            if (err) {
+                return console.error(`Error writing file: ${err.message}`);
+            }
+            console.log(`cleaned data: ${cleanedData}`)
+            console.log('File has been cleaned successfully.');
+        });
+    });
+}
+
+// Calling the function to clean the file
+cleanFile(filePath);
