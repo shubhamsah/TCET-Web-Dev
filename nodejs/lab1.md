@@ -599,3 +599,7 @@ function showMenu() {
 - Basic CRUD operations
 - Error handling and input validation
 - Code organisation and best practices
+
+<p align="right">
+<a href="./lab2.md">Next Lab &rarr;</a>
+</p>
