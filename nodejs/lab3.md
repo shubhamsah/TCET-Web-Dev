@@ -242,5 +242,5 @@ student-manager/
 - Building a functional JSON API
 
 <p align="right">
-<a href="./lab4.md">Next Lab &rarr;</a>
+<a href="https://shubhamsah.github.io/TCET-Web-Dev/nodejs/lab4.html">Next Lab &rarr;</a>
 </p>
