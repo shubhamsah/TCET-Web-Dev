@@ -6,3 +6,4 @@
 | 04   |                                                             [WS](./ws/ws.md)                                                              |
 | 05   |                                                             [WS](./ws/ws2.md)                                                              |
 |06  | [Slides](https://drive.google.com/drive/folders/1bto9TqNWtBYv_1K7CNhyOcVD_yb5JZ8z?usp=drive_link' ) |
+|07 | [NodeJs Labs](./nodejs/lab1.md) |
