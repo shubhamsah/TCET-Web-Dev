@@ -313,5 +313,5 @@ npm start
 
 
 <p align="right">
-<a href="./lab2.md">Next Lab &rarr;</a>
+<a href="https://shubhamsah.github.io/TCET-Web-Dev/nodejs/lab2.html">Next Lab &rarr;</a>
 </p>
