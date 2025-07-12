@@ -252,5 +252,5 @@ student-manager/
 - Project modularization and structure
 
 <p align="right">
-<a href="./lab3.md">Next Lab &rarr;</a>
+<a href="https://shubhamsah.github.io/TCET-Web-Dev/nodejs/lab3.html">Next Lab &rarr;</a>
 </p>
