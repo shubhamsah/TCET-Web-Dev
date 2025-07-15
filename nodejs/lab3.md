@@ -33,9 +33,34 @@ This will be the entry point for your HTTP-based student API.
 </details>
 
 <details>
-<summary>✅ Solution</summary>
+<summary>✅ Solution (Click to Unlock)</summary>
+<div id="solution-lock-3">
+  <input type="password" id="pwd-3" placeholder="Enter passcode" />
+  <button onclick="startUnlockSequence()">Unlock</button>
 
-<pre><code class="language-js">
+  <div id="guilt-layer" style="display:none; margin-top: 1rem;">
+    <p>🤨 Are you sure you want to peek at the solution?</p>
+    <button onclick="nextGuiltStep(1)">Yes, show me.</button>
+  </div>
+
+  <div id="guilt-step-1" style="display:none; margin-top: 1rem;">
+    <p>😬 But did you even try it yourself...?</p>
+    <button onclick="nextGuiltStep(2)">Uhh... sort of.</button>
+  </div>
+
+  <div id="guilt-step-2" style="display:none; margin-top: 1rem;">
+    <p>🤖 No ChatGPT or StackOverflow copy-paste, right?</p>
+    <button onclick="nextGuiltStep(3)">Okay okay, guilty.</button>
+  </div>
+
+  <div id="guilt-step-3" style="display:none; margin-top: 1rem;">
+    <p>📚 This is your <strong>age of learning</strong>. Earn it.</p>
+    <p>💡 Did you look at the <em>hints</em> first?</p>
+    <button onclick="nextGuiltStep(4)">I'm ready. Show me.</button>
+  </div>
+
+  <div id="protected-content-3" style="display:none; margin-top:10px;">
+    <pre><code class="language-js">
 // server.js
 const http = require('http');
 const { URL } = require('url');
@@ -49,19 +74,15 @@ const {
 const PORT = 3000;
 
 const server = http.createServer(async (req, res) => {
-  const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
+  const parsedUrl = new URL(req.url, \`http://\${req.headers.host}\`);
   const path = parsedUrl.pathname;
   const method = req.method;
 
-  // Route: GET /students
   if (method === 'GET' && path === '/students') {
     const students = listAllStudents();
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify(students));
-  }
-
-  // Route: GET /students/:id
-  else if (method === 'GET' && path.startsWith('/students/')) {
+  } else if (method === 'GET' && path.startsWith('/students/')) {
     const id = parseInt(path.split('/')[2]);
     const student = findStudentById(id);
     if (student) {
@@ -71,10 +92,7 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(404, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ error: 'Student not found' }));
     }
-  }
-
-  // Route: POST /students
-  else if (method === 'POST' && path === '/students') {
+  } else if (method === 'POST' && path === '/students') {
     let body = '';
     req.on('data', chunk => body += chunk);
     req.on('end', () => {
@@ -88,10 +106,7 @@ const server = http.createServer(async (req, res) => {
         res.end(JSON.stringify({ error: 'Invalid JSON' }));
       }
     });
-  }
-
-  // Route: DELETE /students/:id
-  else if (method === 'DELETE' && path.startsWith('/students/')) {
+  } else if (method === 'DELETE' && path.startsWith('/students/')) {
     const id = parseInt(path.split('/')[2]);
     const removed = deleteStudent(id);
     if (removed) {
@@ -101,20 +116,43 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(404, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ error: 'Student not found' }));
     }
-  }
-
-  // Fallback
-  else {
+  } else {
     res.writeHead(404, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ error: 'Route not found' }));
   }
 });
 
 server.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(\`🚀 Server running at http://localhost:\${PORT}\`);
 });
-</code></pre>
+    </code></pre>
+  </div>
+</div>
 
+<script>
+  function startUnlockSequence() {
+    const pwd = document.getElementById("pwd-3").value;
+    if (pwd === "node123") {
+      document.getElementById("guilt-layer").style.display = "block";
+    } else {
+      alert("❌ Incorrect passcode. Hint: It's something like 'node123'");
+    }
+  }
+
+  function nextGuiltStep(step) {
+    const ids = [
+      "guilt-layer",
+      "guilt-step-1",
+      "guilt-step-2",
+      "guilt-step-3",
+      "protected-content-3"
+    ];
+    if (step < ids.length) {
+      document.getElementById(ids[step - 1]).style.display = "none";
+      document.getElementById(ids[step]).style.display = "block";
+    }
+  }
+</script>
 </details>
 
 ---
@@ -224,22 +262,22 @@ student-manager/
 
 ## ✅ Completion Checklist
 
-- [ ] Created `server.js` using `http` module
-- [ ] Implemented GET, POST, DELETE routes
-- [ ] Routes return proper status codes and JSON response
-- [ ] API is connected to student data from previous lab
-- [ ] Manual parsing of URL params and body
-- [ ] Tested all routes via curl/Postman
+- [ ] Created `server.js` using `http` module  
+- [ ] Implemented GET, POST, DELETE routes  
+- [ ] Routes return proper status codes and JSON response  
+- [ ] API is connected to student data from previous lab  
+- [ ] Manual parsing of URL params and body  
+- [ ] Tested all routes via curl/Postman  
 
 ---
 
 ## 🎓 What You’ve Learned
 
-- How to create a basic HTTP server in Node.js
-- Routing manually without Express
-- How to parse request URL and body
-- Using status codes and headers
-- Building a functional JSON API
+- How to create a basic HTTP server in Node.js  
+- Routing manually without Express  
+- How to parse request URL and body  
+- Using status codes and headers  
+- Building a functional JSON API  
 
 <p align="right">
 <a href="https://shubhamsah.github.io/TCET-Web-Dev/nodejs/lab4.html">Next Lab &rarr;</a>
