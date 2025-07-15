@@ -35,8 +35,11 @@ This module handles all file operations such as saving and loading student data.
 </details>
 
 <details>
-<summary>✅ Solution</summary>
-
+<summary>✅ Solution (Click to unlock)</summary>
+<div id="solution-lock-1">
+  <input type="password" id="pwd-1" placeholder="Enter passcode" />
+  <button onclick="checkPassword1()">Unlock</button>
+  <div id="protected-content-1" style="display:none; margin-top:10px;">
 <pre><code class="language-js">
 // utils/fileManager.js
 const fs = require('fs');
@@ -68,7 +71,19 @@ function loadDataFromFile() {
 
 module.exports = { saveDataToFile, loadDataFromFile };
 </code></pre>
+  </div>
+</div>
 
+<script>
+  function checkPassword1() {
+    const pwd = document.getElementById("pwd-1").value;
+    if (pwd === "node123") {
+      document.getElementById("protected-content-1").style.display = "block";
+    } else {
+      alert("Incorrect password. Try again!");
+    }
+  }
+</script>
 </details>
 
 ---
@@ -91,8 +106,11 @@ Refactor the student module to use `fileManager.js` for persistent storage.
 </details>
 
 <details>
-<summary>✅ Solution</summary>
-
+<summary>✅ Solution (Click to unlock)</summary>
+<div id="solution-lock-2">
+  <input type="password" id="pwd-2" placeholder="Enter passcode" />
+  <button onclick="checkPassword2()">Unlock</button>
+  <div id="protected-content-2" style="display:none; margin-top:10px;">
 <pre><code class="language-js">
 // src/students.js
 const { saveDataToFile, loadDataFromFile } = require('../utils/fileManager');
@@ -143,7 +161,19 @@ module.exports = {
   deleteStudent
 };
 </code></pre>
+  </div>
+</div>
 
+<script>
+  function checkPassword2() {
+    const pwd = document.getElementById("pwd-2").value;
+    if (pwd === "node123") {
+      document.getElementById("protected-content-2").style.display = "block";
+    } else {
+      alert("Incorrect password. Try again!");
+    }
+  }
+</script>
 </details>
 
 ---
@@ -234,22 +264,22 @@ student-manager/
 
 ## ✅ Completion Checklist
 
-- [ ] Created `fileManager.js` module
-- [ ] Implemented save/load/backup functionality
-- [ ] Modified `students.js` to load and persist data
-- [ ] Verified data is retained across app restarts
-- [ ] Backup is saved automatically after every change
-- [ ] Code is clean and modular
+- [ ] Created `fileManager.js` module  
+- [ ] Implemented save/load/backup functionality  
+- [ ] Modified `students.js` to load and persist data  
+- [ ] Verified data is retained across app restarts  
+- [ ] Backup is saved automatically after every change  
+- [ ] Code is clean and modular  
 
 ---
 
 ## 🎓 What You’ve Learned
 
-- How to persist data in JSON files with Node.js
-- Error handling for file operations
-- Sync vs Async file I/O trade-offs
-- Basic backup strategies
-- Project modularization and structure
+- How to persist data in JSON files with Node.js  
+- Error handling for file operations  
+- Sync vs Async file I/O trade-offs  
+- Basic backup strategies  
+- Project modularization and structure  
 
 <p align="right">
 <a href="https://shubhamsah.github.io/TCET-Web-Dev/nodejs/lab3.html">Next Lab &rarr;</a>
